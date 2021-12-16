@@ -3,7 +3,7 @@ import java.util.*;
 
 class Day3 {
 	public static void main(String[] args) throws IOException {
-		// f1();
+		f1();
         f2();
 	}
 
@@ -61,7 +61,6 @@ class Day3 {
                     count++;
                 }
             }
-            // System.out.println(set1.size() + " "+ count);
 
             int size = (set1.size() % 2 == 0) ? set1.size() : set1.size() + 1;
             if (count >= size / 2) {
@@ -86,7 +85,6 @@ class Day3 {
 
         for (int idx : set1) {
             String str = strings[idx];
-            // System.out.println(str);
             for (int i=0;i<12;i++) {
                 x <<= 1;
                 if (str.charAt(i) == '1') {
@@ -94,8 +92,6 @@ class Day3 {
                 }
             }
         }
-
-        System.out.println(x);
 
         int bit2 = 0;
 
@@ -127,13 +123,10 @@ class Day3 {
             bit2++;
         }
 
-        // System.out.println(set1.size() + " "+ set2.size());
-
         long y = 0;
 
         for (int idx : set2) {
             String str = strings[idx];
-            // System.out.println(str);
             for (int i=0;i<12;i++) {
                 y <<= 1;
                 if (str.charAt(i) == '1') {
@@ -141,22 +134,6 @@ class Day3 {
                 }
             }
         }
-
-        System.out.println(y);
-
-        // long x = 0;
-        // long y = 0;
-
-        // for (int i=0;i<12;i++) {
-        //     // System.out.println(count[i]);
-        //     x <<= 1;
-        //     y <<= 1;
-        //     if (count[i] > 500) {
-        //         x = x | 1;
-        //     } else {
-        //         y = y | 1;
-        //     }
-        // }
 
         System.out.println(x * y);
     }

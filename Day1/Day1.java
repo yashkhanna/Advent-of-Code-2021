@@ -3,7 +3,7 @@ import java.util.*;
 
 class Day1 {
 	public static void main(String[] args) throws IOException {
-		f1();
+        f1();
         f2();
 	}
 
